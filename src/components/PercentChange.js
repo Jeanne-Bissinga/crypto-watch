@@ -17,6 +17,7 @@ const PercentChange = ({ percent }) => {
 
   return (
     <p className="percent-change-container" style={{ color }}>
+      {/* Affichage du pourcentage avec une seule décimale, ou un tiret si aucune valeur */}
       {percent ? percent.toFixed(1) + "%" : "-"}
     </p>
   );

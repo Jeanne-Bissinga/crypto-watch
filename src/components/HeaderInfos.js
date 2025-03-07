@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PercentChange from "./PercentChange";
 import colors from "../styles/_settings.scss";
+import TableFilters from "./TableFilters";
 
 const HeaderInfos = () => {
   const [headerData, setHeaderData] = useState([]);
   useEffect(() => {
+    // Requête API pour récupérer les données globales des crypto-monnaies
     axios
       .get("https://api.coingecko.com/api/v3/global")
       .then((res) => setHeaderData(res.data.data));
@@ -19,11 +21,15 @@ const HeaderInfos = () => {
           </h1>
         </li>
         <li>
+          {/* Affichage du nombre de crypto-monnaies actives */}
           Crypto-monnaies :{" "}
           {headerData.active_cryptocurrencies &&
             headerData.active_cryptocurrencies.toLocaleString()}
         </li>
-        <li>Marchés : {headerData.markets}</li>
+        <li>
+          {/* Affichage du nombre de marchés */}
+          Marchés : {headerData.markets}
+        </li>
       </ul>
       <ul className="infos-mkt">
         <li className="global-mkt">
@@ -42,16 +48,19 @@ const HeaderInfos = () => {
           </strong>
         </li>
         <li>
+          {/* Affichage de la dominance du Bitcoin en pourcentage */}
           BTC dominance :{" "}
           {headerData.market_cap_percentage &&
             headerData.market_cap_percentage.btc.toFixed(1) + "%"}
         </li>
         <li>
+          {/* Affichage de la dominance de l'Ethereum en pourcentage */}
           ETH dominance :{" "}
           {headerData.market_cap_percentage &&
             headerData.market_cap_percentage.eth.toFixed(1) + "%"}
         </li>
       </ul>
+      <TableFilters />
     </div>
   );
 };
