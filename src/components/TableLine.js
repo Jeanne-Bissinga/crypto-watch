@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import CoinChart from "./CoinChart";
+import CoinChart from "./CoinChart";
 import PercentChange from "./PercentChange";
 import StarIcon from "./StarIcon";
 
