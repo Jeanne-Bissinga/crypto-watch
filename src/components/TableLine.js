@@ -61,7 +61,7 @@ const TableLine = ({ coin, index }) => {
             target="_blank"
             href={
               "https://www.coingecko.com/fr/pi%C3%A8ces/" +
-              coin.name.toLowerCase().replace(" ", "-").replace(" ", "-")
+              coin.id.toLowerCase()
             }
           >
             <img src="./assets/info-icon.svg" alt="info-icon" />
