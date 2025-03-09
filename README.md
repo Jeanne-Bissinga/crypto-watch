@@ -6,20 +6,13 @@ Lors des tests, il est possible que certaines requêtes à l’API échouent de 
 AxiosError: Network Error
 
 Ce comportement est principalement dû aux limitations et contraintes imposées par l’API utilisée.
+Les restrictions de débit peuvent provoquer un blocage temporaire lorsqu’un certain nombre de requêtes est envoyé sur une courte période.
 
-Les restrictions de débit peuvent provoquer un blocage temporaire lorsqu’un trop grand nombre de requêtes est envoyé sur une courte période.
+Je pense que tout ceci est dû au fait que j'utilise une API gratuite.
+Ce problème étant lié à des facteurs externes, je vous prie de prendre en compte ces contraintes lors de l’évaluation du projet.
 
-Enfin, la fiabilité de l’API elle-même peut être en cause. Étant une API publique ou gratuite, elle peut être sujette à des indisponibilités temporaires.
-
-🔹 Recommandations
-
-Si vous rencontrez cette erreur lors des tests, nous vous recommandons d’attendre quelques instants avant de relancer la requête.
-
-Il est également conseillé de vérifier que les paramètres envoyés respectent les contraintes définies par l’API.
-
-Enfin, examiner la console peut permettre d’identifier d’éventuelles réponses d’erreur détaillées.
-
-Ce problème étant lié à des facteurs externes, nous vous remercions de prendre en compte ces contraintes lors de l’évaluation du projet.
+Recommandations :
+Si vous rencontrez cette erreur, je vous recommande d’attendre quelques instants avant de relancer la requête.
 
 ---
 
