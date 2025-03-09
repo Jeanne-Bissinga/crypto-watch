@@ -1,0 +1,14 @@
+Note sur la stabilité des requêtes API
+
+Lors des tests, il est possible que certaines requêtes à l’API échouent de manière intermittente, entraînant l'erreur suivante :
+AxiosError: Network Error
+
+Ce comportement est principalement dû aux limitations et contraintes imposées par l’API utilisée.
+Les restrictions de débit peuvent provoquer un blocage temporaire lorsqu’un certain nombre de requêtes est envoyé sur une courte période.
+
+Je pense que tout ceci est dû au fait que j'utilise une API gratuite.
+Ce problème étant lié à des facteurs externes, je vous prie de prendre en compte ces contraintes lors de l’évaluation du projet.
+
+
+Recommandations :
+Si vous rencontrez cette erreur, je vous recommande d’attendre quelques instants avant de relancer la requête.
