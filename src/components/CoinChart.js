@@ -24,8 +24,6 @@ const CoinChart = ({ coinId, coinName }) => {
     [30, "1 mois"],
     [91, "3 mois"],
     [181, "6 mois"],
-    [365, "1 an"],
-    [3000, "Max"],
   ];
 
   useEffect(() => {
